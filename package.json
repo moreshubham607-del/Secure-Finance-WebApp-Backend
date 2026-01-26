@@ -1,0 +1,26 @@
+{
+  "name": "secure-finance-webapp-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swaraj-Jadhav/Secure-Finance-WebApp-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Swaraj-Jadhav/Secure-Finance-WebApp-Backend/issues"
+  },
+  "homepage": "https://github.com/Swaraj-Jadhav/Secure-Finance-WebApp-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.5",
+    "nodemon": "^3.1.11"
+  }
+}

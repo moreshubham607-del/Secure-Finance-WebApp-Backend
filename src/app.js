@@ -1,14 +1,19 @@
 const express = require("express");
+
+const accountRoutes = require("./account/account.routes");
+const subaccountRoutes = require("./subaccount/subaccount.routes");
+
 const app = express();
 
 app.use(express.json());
 
-const mockAuth = require("./middleware/mockAuth");
+// Routes
+app.use("/api/account", accountRoutes);
+app.use("/api/subaccounts", subaccountRoutes);
 
-app.use(mockAuth);
-
-app.use("/api/account", require("./account/account.routes"));
-app.use("/api/subaccount", require("./subaccount/subaccount.routes"));
-app.use("/api/transaction", require("./transaction/transaction.routes"));
+// Health check
+app.get("/health", (req, res) => {
+  res.json({ status: "OK" });
+});
 
 module.exports = app;
